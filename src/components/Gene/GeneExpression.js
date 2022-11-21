@@ -121,7 +121,7 @@ const AnatEntityCell = ({ cell }) => {
     cellInfo.push(
       <LinkExternal
         key={`link-${cell.condition.cellType.id}`}
-        to={obolibraryLinkFromID(cell.condition.anatEntity.id)}
+        to={obolibraryLinkFromID(cell.condition.cellType.id)}
         className="mr-1"
       >
         {cell.condition.cellType.id}
