@@ -94,6 +94,7 @@ const RawDataAnnotations = ({ isExprCalls = false }) => {
     getSearchParams,
   } = useLogic(isExprCalls);
 
+  const loc = useLocation();
   const defaultResults = searchResult?.results?.[dataType] || [];
   const resultExprsCall = searchResult?.expressionData?.expressionCalls || [];
   const results = isExprCalls ? resultExprsCall : defaultResults;
@@ -189,7 +190,7 @@ const RawDataAnnotations = ({ isExprCalls = false }) => {
   });
 
   const parameterInCurrentUrlWithoutPageType = (() => {
-    const params = new URLSearchParams( useLocation().search );
+    const params = new URLSearchParams( loc.search );
     params.delete('pageType');
     if (params) {
       return `&${params.toString()}`;
