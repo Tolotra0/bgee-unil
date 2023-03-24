@@ -865,6 +865,7 @@ const useLogic = (isExprCalls) => {
     triggerSearch,
     triggerCounts,
     addConditionalParam,
+    getSearchParams,
   };
 };
 
